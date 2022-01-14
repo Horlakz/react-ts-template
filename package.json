@@ -1,5 +1,5 @@
 {
-  "name": "school-news-blog",
+  "name": "react-ts-blog",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --host",
