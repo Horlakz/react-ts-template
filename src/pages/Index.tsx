@@ -5,7 +5,7 @@ const Index = (): JSX.Element => {
     <BaseLayout>
       <BaseLayout.Container>
         <BaseLayout.Header />
-        <div>this thing dey mad sha</div>
+        <div>this is just a template</div>
         <BaseLayout.Footer />
       </BaseLayout.Container>
     </BaseLayout>
