@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import Header from "../components/BaseLayout/Header";
 import Footer from "../components/BaseLayout/Footer";
+import Container from "../components/BaseLayout/Container"
 
 interface Props {
     children: JSX.Element;
@@ -9,12 +10,10 @@ interface Props {
 
 const BaseLayout: FC<Props> = ({ children }) => {
   return (
-    <>
-      <Header />
+    <main>
       {children}
-      <Footer />
-    </>
+    </main>
   );
 }
 
-export default BaseLayout;
+export default Object.assign(BaseLayout, {Header, Footer, Container});
