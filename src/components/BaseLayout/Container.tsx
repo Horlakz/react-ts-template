@@ -6,4 +6,3 @@ const Container: FC<Object> = ({ children }) => {
 }
 
 export default Container
-
