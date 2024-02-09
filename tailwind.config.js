@@ -1,7 +1,17 @@
-module.exports = {
-  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#262626",
+        secondary: "#FFD700",
+        success: "#4BB543",
+        danger: "#FF4136",
+        warning: "#FFC300",
+        info: "#7FDBFF",
+      },
+    },
   },
   plugins: [],
-}
+};

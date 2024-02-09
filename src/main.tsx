@@ -1,11 +1,9 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App";
+import ReactDOM from "react-dom/client";
 
-const container: Element | DocumentFragment = document.getElementById("root")!;
-const root = createRoot(container);
+import App from "@/app.tsx";
 
-root.render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>

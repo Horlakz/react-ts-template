@@ -1,22 +1,22 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-// home page
-import Index from "../pages/Index";
+import AuthLayout from "@/layouts/authlayout";
+import BaseLayout from "@/layouts/baselayout";
+import ErrorPage from "@/pages/404";
 
-// error page
-import Error from "../pages/error/Error";
+import { authRoutes } from "@/router/auth.route";
+import { layoutRoutes } from "@/router/layout.route";
 
-export default function Routere() {
-  return (
-    <Router>
-      <Routes>
-        {/* error page */}
-        <Route path="*" element={<Error />} />
+const routes = [
+  { path: "*", element: <ErrorPage /> },
+  { path: "/", element: <BaseLayout />, children: layoutRoutes },
+  { path: "/", element: <AuthLayout />, children: authRoutes },
+];
 
-        {/* home page */}
-        <Route path="/" element={<Index />} />
-      </Routes>
-    </Router>
-  );
+const router = createBrowserRouter(routes);
+
+function Router() {
+  return <RouterProvider router={router} />;
 }
+
+export default Router;
