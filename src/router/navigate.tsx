@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useRouter } from "./router.hook";
 import { NavigateProps } from "./router.interface";
 
@@ -10,7 +11,9 @@ import { NavigateProps } from "./router.interface";
 function Navigate(props: NavigateProps) {
   const router = useRouter();
 
-  router.goTo(props.to);
+  useEffect(() => {
+    router.goTo(props.to);
+  }, [props.to]);
 
   return null;
 }
