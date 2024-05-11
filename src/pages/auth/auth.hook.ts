@@ -8,12 +8,9 @@ import { Storage } from "@/utilities/storage";
 import { LoginRequestPayload } from "./auth.interface";
 import { AuthService } from "./auth.service";
 
-const storage = new Storage();
-const auth = new AuthService();
-const router = useRouter();
-
 export function useAuth() {
   const storage = new Storage();
+  const router = useRouter();
 
   const isAuthenticated = storage.checkItem(ACCESS_TOKEN_KEY);
 
@@ -26,6 +23,10 @@ export function useAuth() {
 }
 
 export function useLogin(data: LoginRequestPayload) {
+  const storage = new Storage();
+  const auth = new AuthService();
+  const router = useRouter();
+
   const loginMutation = useMutation({
     mutationFn: async () => await auth.login(data),
     onSuccess: (data) => {
