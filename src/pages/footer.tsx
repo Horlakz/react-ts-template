@@ -75,7 +75,7 @@ function Footer() {
         <p className="flex items-center gap-2">
           <img src={logo} className="w-6" />
 
-          <span>&copy; Formatio {new Date().getFullYear()}</span>
+          <span>&copy; Template App {new Date().getFullYear()}</span>
         </p>
       </div>
     </footer>

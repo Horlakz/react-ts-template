@@ -13,7 +13,7 @@ function Header() {
     <header className="flex-between-center py-4 sm:px-20 px-6">
       <Link to="/" className="flex-center gap-2">
         <img src={logo} className="w-10 h-auto" />
-        <h1 className="text-lg font-semibold">Formatio</h1>
+        <h1 className="text-lg font-semibold">Template App</h1>
       </Link>
 
       <nav className="relative">
