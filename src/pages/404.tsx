@@ -1,5 +1,5 @@
-import Footer from "@/layouts/baselayout/footer";
-import Header from "@/layouts/baselayout/header";
+import Footer from "./footer";
+import Header from "./header";
 
 const ErrorPage = () => {
   return (

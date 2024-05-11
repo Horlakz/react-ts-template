@@ -1,8 +1,8 @@
 import { FC } from "react";
 
-import { AppLayoutProps } from "./applayout.interface";
+import { Children } from "./interface";
 
-const AppLayout: FC<AppLayoutProps> = ({ children }) => {
+const AppLayout: FC<Children> = ({ children }) => {
   return <div className="bg-primary text-white min-h-screen">{children}</div>;
 };
 

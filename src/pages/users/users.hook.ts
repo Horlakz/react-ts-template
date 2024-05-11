@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 
-import { UserResponse } from "@/services/user/user.interface";
+import { UserResponse } from "./user.interface";
 
 export function useGetUserDetails() {
   const user = useQuery<UserResponse>({ queryKey: ["user", "profile"] });

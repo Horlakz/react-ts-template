@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Button from "@/components/ui/button";
 import Input from "@/components/ui/form/input";
 import { useForm } from "@/hooks/form";
-import { loginSchema } from "@/services/auth/auth.schema";
+import { loginSchema } from "@/pages/auth/auth.schema";
 import { useLogin } from "../auth.hook";
 
 const LoginPage = () => {

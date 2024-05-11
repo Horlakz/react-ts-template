@@ -4,7 +4,7 @@ import {
 } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
-import { Client } from "@/services/api-client";
+import { Client } from "@/services/http-client";
 import { joinPaths } from "@/utilities/common";
 
 const client = new Client();

@@ -1,11 +1,10 @@
-import { Navigate } from "react-router-dom";
+import Navigate from "@/router/navigate";
+import { useAuth } from "./auth/auth.hook";
 
-import { useAuth } from "@/hooks/auth";
-
-const HomePage = (): JSX.Element => {
+const HomePage = () => {
   const { isAuthenticated } = useAuth();
 
-  if (isAuthenticated) return <Navigate to={"/dashboard"} />;
+  if (isAuthenticated) return <Navigate to="/dashboard" />;
 
   return (
     <main>

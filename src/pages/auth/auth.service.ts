@@ -1,11 +1,9 @@
-import { Client } from "@/services/api-client";
+import { Client } from "@/services/http-client";
 import {
   LoginRequestPayload,
   LoginResponsePayload,
   RegistrationRequestPayload,
   RegistrationResponsePayload,
-  SocialAuthRequestPayload,
-  SocialAuthResponsePayload,
 } from "./auth.interface";
 
 export class AuthService {
@@ -23,12 +21,5 @@ export class AuthService {
       RegistrationRequestPayload,
       RegistrationResponsePayload
     >("auth/register", data);
-  }
-
-  socialAuth(data: SocialAuthRequestPayload) {
-    return this.apiClient.post<
-      SocialAuthRequestPayload,
-      SocialAuthResponsePayload
-    >("auth/social-connection", data);
   }
 }

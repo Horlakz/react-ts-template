@@ -2,9 +2,9 @@ import { Toaster } from "react-hot-toast";
 
 import "@/styles/globals.scss";
 
-import AppLayout from "@/layouts/applayout";
 import QueryClientProvider from "@/providers/queryclient.provider";
 import Router from "@/router";
+import AppLayout from "./layout";
 
 const App = () => {
   return (

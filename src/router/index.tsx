@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import AuthLayout from "@/layouts/authlayout";
-import BaseLayout from "@/layouts/baselayout";
 import ErrorPage from "@/pages/404";
+import AuthLayout from "@/pages/auth/layout";
+import BaseLayout from "@/pages/layout";
 
 import { authRoutes } from "@/router/auth.route";
 import { layoutRoutes } from "@/router/layout.route";

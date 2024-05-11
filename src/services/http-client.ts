@@ -8,7 +8,7 @@ import axios, {
 import { ACCESS_TOKEN_KEY, REFRESH_TOKEN_KEY } from "@/constants/auth";
 import { API_BASE_URL } from "@/constants/env-vars";
 import { Storage } from "@/utilities/storage";
-import { LoginResponsePayload } from "./auth/auth.interface";
+import { LoginResponsePayload } from "../pages/auth/auth.interface";
 
 export class Client {
   private axiosClient: AxiosInstance;

@@ -3,14 +3,27 @@ import { AxiosError } from "axios";
 import toast from "react-hot-toast";
 
 import { ACCESS_TOKEN_KEY, REFRESH_TOKEN_KEY } from "@/constants/auth";
-import { useRouter } from "@/hooks/common/router";
-import { AuthService } from "@/services/auth";
-import { LoginRequestPayload } from "@/services/auth/auth.interface";
+import { useRouter } from "@/router/router.hook";
 import { Storage } from "@/utilities/storage";
+import { LoginRequestPayload } from "./auth.interface";
+import { AuthService } from "./auth.service";
 
 const storage = new Storage();
 const auth = new AuthService();
 const router = useRouter();
+
+export function useAuth() {
+  const storage = new Storage();
+
+  const isAuthenticated = storage.checkItem(ACCESS_TOKEN_KEY);
+
+  function logout() {
+    storage.deleteItem(ACCESS_TOKEN_KEY);
+    router.goTo("/login");
+  }
+
+  return { isAuthenticated, logout };
+}
 
 export function useLogin(data: LoginRequestPayload) {
   const loginMutation = useMutation({

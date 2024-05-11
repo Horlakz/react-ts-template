@@ -6,8 +6,8 @@ import { Outlet } from "react-router-dom";
 import logo from "@/assets/react.svg";
 
 import Button from "@/components/ui/button";
-import { useAuth } from "@/hooks/auth";
-import { useRouter } from "@/hooks/common/router";
+import { useRouter } from "@/router/router.hook";
+import { useAuth } from "./auth.hook";
 
 const AuthLayout = () => {
   const router = useRouter();
