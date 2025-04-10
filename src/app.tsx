@@ -1,6 +1,6 @@
 import { Toaster } from "react-hot-toast";
 
-import "@/styles/globals.scss";
+import "@/styles/globals.css";
 
 import QueryClientProvider from "@/providers/queryclient.provider";
 import Router from "@/router";
