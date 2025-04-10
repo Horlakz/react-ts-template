@@ -2,7 +2,7 @@ import {
   useLocation,
   useNavigate,
   useParams as useReactRouterDomParams,
-} from "react-router-dom";
+} from "react-router";
 
 export function useRouter() {
   const location = useLocation();
