@@ -1,3 +1,1 @@
-const env = import.meta.env;
-
-export const API_BASE_URL = env.VITE_API_URL;
+export const API_BASE_URL = "https://example.com";
