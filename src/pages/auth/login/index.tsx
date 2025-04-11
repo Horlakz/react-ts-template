@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "@/router/link";
 
 import Button from "@/components/ui/button";
 import Input from "@/components/ui/form/input";
@@ -35,7 +35,7 @@ const LoginPage = () => {
       />
 
       <p className="flex justify-end w-full text-gray-300">
-        <Link to="/forgot-password">Forgot Password?</Link>
+        <Link href="/forgot-password">Forgot Password?</Link>
       </p>
 
       <div className="flex-center w-full">

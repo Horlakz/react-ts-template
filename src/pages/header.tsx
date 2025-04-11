@@ -1,6 +1,6 @@
+import Link from "@/router/link";
 import classNames from "classnames";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 import { MdMenu } from "react-icons/md";
 
@@ -11,7 +11,7 @@ function Header() {
 
   return (
     <header className="flex-between-center py-4 sm:px-20 px-6">
-      <Link to="/" className="flex-center gap-2">
+      <Link href="/" className="flex-center gap-2">
         <img src={logo} className="w-10 h-auto" />
         <h1 className="text-lg font-semibold">Template App</h1>
       </Link>
@@ -41,7 +41,7 @@ function Header() {
             <Link
               key={i}
               className="hover:text-secondary default-transition"
-              to={link.href}
+              href={link.href}
             >
               {link.name}
             </Link>
@@ -57,7 +57,7 @@ function Header() {
             <li key={i}>
               <Link
                 className="hover:text-secondary default-transition"
-                to={link.href}
+                href={link.href}
               >
                 {link.name}
               </Link>

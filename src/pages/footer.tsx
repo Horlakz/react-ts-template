@@ -5,10 +5,10 @@ import {
   FiLinkedin as LinkedInIcon,
   FiTwitter as TwitterIcon,
 } from "react-icons/fi";
-import { Link } from "react-router-dom";
 
 import logo from "@/assets/react.svg";
 import Button from "@/components/ui/button";
+import Link from "@/router/link";
 
 function Footer() {
   return (
@@ -18,7 +18,7 @@ function Footer() {
           <Button
             variant="ghost"
             as={Link}
-            to={"https://linkedin.com/company/formatio-cloud"}
+            href={"https://linkedin.com/company/formatio-cloud"}
             target="_blank"
           >
             <LinkedInIcon />
@@ -27,7 +27,7 @@ function Footer() {
           <Button
             variant="ghost"
             as={Link}
-            to={"https://twitter.com/formatio_cloud"}
+            href={"https://twitter.com/formatio_cloud"}
             target="_blank"
           >
             <TwitterIcon />
@@ -36,7 +36,7 @@ function Footer() {
           <Button
             variant="ghost"
             as={Link}
-            to={"https://instagram.com/formatio_cloud"}
+            href={"https://instagram.com/formatio_cloud"}
             target="_blank"
           >
             <InstagramIcon />
@@ -45,7 +45,7 @@ function Footer() {
           <Button
             variant="ghost"
             as={Link}
-            to={"https://github.com/overal-x"}
+            href={"https://github.com/overal-x"}
             target="_blank"
           >
             <GithubIcon />
@@ -56,7 +56,7 @@ function Footer() {
           <DotIcon />
         </span>
 
-        <Button variant="link" as={Link} to="/terms">
+        <Button variant="link" as={Link} href="/terms">
           Terms
         </Button>
 
@@ -64,7 +64,7 @@ function Footer() {
           <DotIcon />
         </span>
 
-        <Button variant="link" as={Link} to="/privacy">
+        <Button variant="link" as={Link} href="/privacy">
           Privacy
         </Button>
 

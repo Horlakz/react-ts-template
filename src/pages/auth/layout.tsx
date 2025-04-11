@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { useEffect } from "react";
 import toast from "react-hot-toast";
-import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router";
 
 import logo from "@/assets/react.svg";
 
